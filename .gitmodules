@@ -1,0 +1,3 @@
+[submodule "IMS-V6-MobileFormat"]
+	path = IMS-V6-MobileFormat
+	url = https://github.com/FerBoiD/IMS-V6-MobileFormat.git

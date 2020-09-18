@@ -1,0 +1,65 @@
+<%-include("./partials/header")%>
+<script>var totalCost=0;</script>
+
+<div class="container-fluid">
+    <div class="card border-secondary">
+        <!-- <div class="row"> -->
+            <div>
+                <div class="card-header big_card text-center top">
+                    Your Special Wishlist...
+                </div>
+            </div> 
+            <div class="card-body">
+                <div class="row">
+                    <%wishlist.forEach(function(wishlist){%>                      
+                            <div class="col-lg-3 col-md-4 col-sm-6 " >
+                                <div class="card border-secondary mb-3 color" >
+                                    <div class="card-header inner_card_header border-secondary text-center"><%=wishlist.model_name%></div>
+                                        <div class="card-body inner_card_text text-secondary">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item text-center">Original price: Rs <%=wishlist.original_price%></li>
+                                                <li class="list-group-item text-center"><%=wishlist.offPercent%>% off Rs <%=wishlist.original_price%> per Peace</li>
+                                                <li class="list-group-item text-center">Quantity : <%=wishlist.peaces%></li>
+                                            </ul>
+                                        </div>
+                                    <div class="card-footer inner_card_footer border-success text-center">Cost : Rs <%=wishlist.total%></div>
+                                </div>
+                                <form action="/remove_from_wishlist/<%=wishlist._id%>" method="POST">
+                                    <button class="col-12 btn product_cost">Remove From Wishlist</button>
+                                </form>
+                                <form action="/add_to_cart/<%=wishlist._id%>" method="POST">
+                                    <button class="col-12 btn product_cost">Add To Cart</button>
+                                </form>
+                            </div>  
+                            <script>
+                                totalCost=totalCost+<%=wishlist.total%>;
+                            </script>   
+                    <%})%>
+                </div>
+            </div>   
+              
+        <!-- </div> -->
+        <div class="card-footer big_card_footer text-center">
+          Total Cost : <span id="total"></span>
+        </div>
+      </div>
+</div>
+
+<div class="container-fluid text-center">
+    <a href="/cable" class="btn btn-secondary" style="margin-bottom: 2.5rem; background-color: rgb(255, 115, 0);  width: 50%; height: 3rem;">Continue Shoping</a>
+    <form action="/transaction" method="POST">
+        <button class="btn btn-secondary" style="margin-bottom: 2.5rem; background-color: rgb(255,223,0); width: 50%; height: 3rem;">Buy All my wished items</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("total").innerHTML=totalCost;
+</script>
+
+</body>
+</html>
+
+
+<%-include("./partials/footer")%>
+
+

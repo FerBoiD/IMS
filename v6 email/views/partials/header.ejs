@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IMS. Cables and Indicators</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+   
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md fixed-top">
+<div class="container-fluid">
+    <a class="navbar-brand" href="/">IMS.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ColapseNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ColapseNavbar">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/landing">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cable">Cables</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="indicator">Indicators</a>
+            </li> 
+            
+            <li class="dropdown">
+				<a data-toggle="dropdown" class="nav-link" href="#" style="font-size:21px; color: #ffc451;margin-left: 45px;"><i class="fa fa-search"></i></a> 
+				<ul class="dropdown-menu">
+					<li>
+                        <form method="GET">
+                            <div class="form-group" style="margin-bottom: 0rem;">
+                                <input type="text" name="search" placeholder="Search Bike Model" class="form-control">
+                                <button formaction="/cable" class="btn btn_form">Search Cables</button>
+                                <button formaction="/indicator" class="btn btn_form">Search Indicator</button>
+                            </div>
+                        </form>                       
+					</li>
+				</ul>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="/wishlist">Wishlist <i class="fa fa-heart" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="order"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
+            
+            <%if(!currentUser){%>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Sign Up</a>
+            </li>
+            <%}else{%>
+            <li class="nav-item">
+                <a class="nav-link" href="/login" style="color:#ffc451;font-size: 20px;">Hi <%=currentUser.username%>!!</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+</nav>
+<nav>
+    <% if(message && message.length>0){ %>
+        <div class="alert alert-success text-center" role="alert" style="height: 8rem;  background-color: rgba(128, 255, 0, 0.493);">
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: 600; margin-top: 4.5rem;margin-bottom: 0.5rem;"><%= message%></p>
+        </div>
+    <% } %>
+    <% if(error && error.length>0){ %>
+        <div class="alert alert-success text-center" role="alert" style="height: 8rem;  background-color: rgba(255, 0, 0, 0.521);">
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: 600; margin-top: 4.5rem;margin-bottom: 0.5rem;"><%= error%></p>
+        </div>
+    <% } %>
+    
+</nav>
+
+
+
+
+
+
+<!-- <form action="/cable" method="GET" class="form-inline">
+    <div class="form-group">
+        <input type="text" name="search" placeholder="Search" class="form-control">
+        <button class="btn btn-primary">Search</button>
+    </div>
+</form> -->

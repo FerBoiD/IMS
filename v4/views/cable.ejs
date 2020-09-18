@@ -1,0 +1,184 @@
+<%-include("./partials/header")%>
+<link href="cable.css" rel="stylesheet">
+
+<div class="jumbotron jumbotron-fluid top_jumbo ">
+    <div class="container text-center">
+      <h1 class="display-4">IMS. CABLES</h1>
+      <hr>
+      <p class="lead">North East India's number one two wheeler auto mobile Spare Parts Dealer.</p>
+    </div>
+  </div>
+
+<%bikes.forEach(function(bike){%>
+<!-- 
+    <script type="text/javascript">
+        document.getElementById("cluch_off10").innerHTML=<%=bike.cluch_price%>-<%=bike.cluch_price%>/10;
+        document.getElementById("cluch_saveprice10").innerHTML=<%=bike.cluch_price%>-(<%=bike.cluch_price%>-<%=bike.cluch_price%>/10);
+        document.getElementById("cluch_off40").innerHTML=<%=bike.cluch_price%>-<%=bike.cluch_price%>*40/100;
+        document.getElementById("cluch_saveprice40").innerHTML=<%=bike.cluch_price%>-(<%=bike.cluch_price%>-<%=bike.cluch_price%>/10);    
+
+        document.getElementById("break_off10").innerHTML=<%=bike.break_price%>-<%=bike.break_price%>/10;
+        document.getElementById("break_saveprice10").innerHTML=<%=bike.break_price%>-(<%=bike.break_price%>-<%=bike.break_price%>/10);
+        document.getElementById("break_off40").innerHTML=<%=bike.break_price%>-<%=bike.break_price%>*40/100;
+        document.getElementById("break_saveprice40").innerHTML=<%=bike.break_price%>-(<%=bike.break_price%>-<%=bike.break_price%>/10);    
+
+        document.getElementById("accelator_off10").innerHTML=<%=bike.accelator_price%>-<%=bike.accelator_price%>/10;
+        document.getElementById("accelator_saveprice10").innerHTML=<%=bike.accelator_price%>-(<%=bike.accelator_price%>-<%=bike.accelator_price%>/10);
+        document.getElementById("accelator_off40").innerHTML=<%=bike.accelator_price%>-<%=bike.accelator_price%>*40/100;
+        document.getElementById("accelator_saveprice40").innerHTML=<%=bike.accelator_price%>-(<%=bike.accelator_price%>-<%=bike.accelator_price%>/10);    
+
+        document.getElementById("meter_off10").innerHTML=<%=bike.meter_price%>-<%=bike.meter_price%>/10;
+        document.getElementById("meter_saveprice10").innerHTML=<%=bike.meter_price%>-(<%=bike.meter_price%>-<%=bike.meter_price%>/10);
+        document.getElementById("meter_off40").innerHTML=<%=bike.meter_price%>-<%=bike.meter_price%>*40/100;
+        document.getElementById("meter_saveprice40").innerHTML=<%=bike.meter_price%>-(<%=bike.meter_price%>-<%=bike.meter_price%>/10);    
+    </script>  -->
+
+<div class="container-fluid padding">
+    <div class="jumbotron second">
+        <div class="model">
+            <h1 class="display-4 text-center"><%=bike.model_name%></h1>
+            <hr>
+        </div>
+        
+        <div class="row">
+            
+           
+            <div class="col-lg-3 col-md-6">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Cluch Cable</h5>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="reviews"><span>24</span> reviews</i>
+                        </div>
+                        <p>Price <span class="price"> Rs <%=bike.cluch_price%></span></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Piece : 10% off Rs <span class="originalprice"><%=bike.cluch_price%></span>
+
+                            <li class="list-group-item">5 Piece : 40% off Rs <span class="originalprice"><%=bike.cluch_price%></span>
+                            
+                                    <li class="list-group-item"><span class="piece">For Mass Suply</span> <a href="#">Contact Us</a></li>
+                            </ul>
+
+                        <form method="POST">
+                            <input type="number" min="1" name="peaces" placeholder="Enter peaces for Cart" style="margin: 1rem 1rem 1rem 1rem;">
+                            <button formaction="/cable/<%=bike._id%>/cluch" class="card-link btn btn1">Add to Cart</button>
+                            <button formaction="/wishlist/<%=bike._id%>/cluch" class="card-link btn btn2">Wishlist</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+           
+            <div class="col-lg-3 col-md-6">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Break Cable</h5>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="reviews"><span>24</span> reviews</i>
+                        </div>
+                        <p>Price <span class="price"> Rs <%=bike.break_price%></span></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Piece : 10% off Rs <span class="originalprice"><%=bike.break_price%></span>
+
+                            <li class="list-group-item">5 Piece : 40% off Rs <span class="originalprice"><%=bike.break_price%></span>
+                            
+                                    <li class="list-group-item"><span class="piece">For Mass Suply</span> <a href="#">Contact Us</a></li>
+                            </ul>
+
+                        <form method="POST">
+                            <input type="number" min="1" name="peaces" placeholder="Enter peaces for Cart" style="margin: 1rem 1rem 1rem 1rem;">
+                            <button formaction="/cable/<%=bike._id%>/break" class="card-link btn btn1">Add to Cart</button>
+                            <button formaction="/wishlist/<%=bike._id%>/break" class="card-link btn btn2">Wishlist</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Accelator Cable</h5>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="reviews"><span>24</span> reviews</i>
+                        </div>
+                        <p>Price <span class="price"> Rs <%=bike.accelator_price%></span></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Piece : 10% off Rs <span class="originalprice"><%=bike.accelator_price%></span>
+
+                            <li class="list-group-item">5 Piece : 40% off Rs <span class="originalprice"><%=bike.accelator_price%></span>
+                            
+                                    <li class="list-group-item"><span class="piece">For Mass Suply</span> <a href="#">Contact Us</a></li>
+                            </ul>
+
+                        <form method="POST">
+                            <input type="number" min="1" name="peaces" placeholder="Enter peaces for Cart" style="margin: 1rem 1rem 1rem 1rem;">
+                            <button formaction="/cable/<%=bike._id%>/accelator" class="card-link btn btn1">Add to Cart</button>
+                            <button formaction="/wishlist/<%=bike._id%>/accelator" class="card-link btn btn2">Wishlist</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Meter Cable</h5>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="reviews"><span>24</span> reviews</i>
+                        </div>
+                        <p>Price <span class="price"> Rs <%=bike.meter_price%></span></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Piece : 10% off Rs <span class="originalprice"><%=bike.meter_price%></span>
+
+                            <li class="list-group-item">5 Piece : 40% off Rs <span class="originalprice"><%=bike.meter_price%></span>
+                            
+                                    <li class="list-group-item"><span class="piece">For Mass Suply</span> <a href="#">Contact Us</a></li>
+                            </ul>
+
+                        <form method="POST">
+                            <input type="number" min="1" name="peaces" placeholder="Enter peaces for Cart" style="margin: 1rem 1rem 1rem 1rem;">
+                            <button formaction="/cable/<%=bike._id%>/meter" class="card-link btn btn1">Add to Cart</button>
+                            <button formaction="/wishlist/<%=bike._id%>/meter" class="card-link btn btn2">Wishlist</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+<%})%>
+
+
+<%-include("./partials/footer")%>
+
+
+
+

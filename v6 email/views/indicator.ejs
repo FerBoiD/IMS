@@ -1,0 +1,66 @@
+<%-include("./partials/header")%>
+<link href="indicator.css" rel="stylesheet">
+
+
+<div class="jumbotron jumbotron-fluid top_jumbo ">
+    <div class="container text-center">
+      <h1 class="display-4">IMS. INDICATORS</h1>
+      <hr>
+      <p class="lead">North East India's number one two wheeler auto mobile Spare Parts Dealer.</p>
+    </div>
+</div>
+
+<div class="text-center" style="margin-bottom: 70px; margin-top: 70px; color: gray;">
+    <% if(nomatch !== null){ %>
+        <h3><%=nomatch%></h3>
+    <%}%>
+</div>
+
+   
+<div class="container-fluid padding">
+        <div class="row">
+            <%indicators.forEach(function(indicator){%>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card" >
+                    <div class="card-body">
+                        <h4 class="card-title"><%=indicator.model_name%></h5>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="reviews"><span>24</span> reviews</i>
+                        </div>
+                        <p>Price <span class="price"> Rs <%=indicator.indicator_price%></span></p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Piece : 10% off Rs <span class="originalprice"><%=indicator.indicator_price%></span>
+
+                            <li class="list-group-item">5 Piece : 40% off Rs <span class="originalprice"><%=indicator.indicator_price%></span>
+                            
+                                    <li class="list-group-item"><span class="piece">For Mass Suply</span> <a href="#">Contact Us</a></li>
+                            </ul>
+
+                        <form method="POST">
+                            <input type="number" min="1" name="peaces" placeholder="Enter peaces for Cart" style="margin: 1rem 1rem 1rem 1rem;">
+                            <button formaction="/indicator/cart/<%=indicator._id%>" class="card-link btn btn1">Add to Cart</button>
+                            <button formaction="/indicator/wishlist/<%=indicator._id%>" class="card-link btn btn2">Wishlist</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <%})%>
+        </div>
+
+</div>
+
+
+
+
+<%-include("./partials/footer")%>
+
+
+
+

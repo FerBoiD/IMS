@@ -1,0 +1,65 @@
+<%-include("./partials/header")%>
+
+
+<link href="order.css" rel="stylesheet">
+<script>var totalCost=0;</script>
+<div class="container-fluid">
+    <div class="card border-secondary">
+        <!-- <div class="row"> -->
+            <div>
+                <div class="card-header big_card text-center top" style="margin-top: 4rem;">
+                    Your Orders
+                </div>
+            </div> 
+
+            <div class="card-body">
+                <div class="row">
+                    <%order.forEach(function(order){%>                      
+                            <div class="col-lg-3 col-md-4 col-sm-6 " >
+                                <div class="card border-secondary mb-3 color" >
+                                    <div class="card-header inner_card_header border-secondary text-center"><%=order.model_name%></div>
+                                        <div class="card-body inner_card_text text-secondary">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item text-center">Original price: Rs <%=order.original_price%></li>
+                                                <li class="list-group-item text-center"><%=order.offPercent%>% off Rs <%=order.original_price%> per Peace</li>
+                                                <li class="list-group-item text-center">Quantity : <%=order.peaces%></li>
+                                            </ul>
+                                        </div>
+                                    <div class="card-footer inner_card_footer border-success text-center">Cost : Rs <%=order.total%></div>
+                                </div>
+                                <form action="/remove_from_cart/<%=order._id%>" method="POST">
+                                    <button href="#" class="col-12 btn product_cost">Remove From Cart</button>
+                                </form>
+                            </div>  
+                            <script>
+                                totalCost=totalCost+ <%=order.total%>;
+                            </script>   
+                    <%})%>
+                </div>
+            </div>   
+              
+        <!-- </div> -->
+        <div class="card-footer big_card_footer text-center">
+          Total Cost : <span id="total"></span>
+          <a href="/cable" class="btn btn-secondary" style="margin-left:5rem; background-color:rgba(95, 158, 160, 0.808);width:13rem;height: 40px;">Continue Shoping</a>
+        </div>
+      </div>
+</div>
+
+<div class="container-fluid text-center ">
+    <form action="/transaction" method="POST">
+        <button class="btn btn-lg pay_buttons">Complete Payment</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("total").innerHTML=totalCost;
+</script>
+
+</body>
+</html>
+
+
+<%-include("./partials/footer")%>
+
+

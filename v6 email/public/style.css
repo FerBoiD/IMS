@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins',sans-serif;
+  color: #222;
+  background-color: rgba(51, 46, 46, 0.068);
+}
+.navbar{
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  }
+.navbar-brand{
+  display: block;
+  position: relative;
+  color: #ffc451;
+  transition: 0.3s;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  margin-right:2rem;
+}
+.form-group .form-control{
+  width: 19.5rem;
+  height: 3rem;
+  background-color: #222;
+  color: #ffc451;
+}
+.form-group .btn_form{
+  height: 3rem;
+  background-color: #ffc451;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 2px;
+  border: black solid 2px;
+}
+.form-group .btn_form:hover{
+  height: 3rem;
+  background-color: #222;
+  color: #ffc451;
+  font-weight: 500;
+  margin-bottom: 2px;
+  border: #ffc451 solid 2px;
+}
+.collapse ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.collapse a {
+  display: block;
+  position: relative;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin-right:1rem;
+  margin-left:1rem;
+}
+.collapse a:hover{
+  color: #ffc451;
+  font-size:18px ;
+}
+.fa-heart{
+  color: #ffc451;
+}
+.fa-shopping-cart{
+  color: #ffc451;
+  font-size: 19px;
+}
+.carousel-inner img{
+  width: 100%;
+  height:100%;
+}
+#slides img{
+  height: 655px;
+}
+.carousel-caption{ 
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+.carousel-caption h1{
+  font-size: 90px;
+  padding-bottom: 25px;
+}
+.carousel-caption h1 span{
+ font-size: 115px;
+ color: #ffc451; ;
+}
+.carousel-caption .number2{
+  font-size: 75px;
+  padding-bottom: 30px;
+  color: rgba(255, 255, 255, 0.938);
+}
+.carousel-caption .number2 span{
+  font-size: 90px;
+  padding-bottom: 30px;
+}
+.carousel-caption .number3{
+  font-size: 75px;
+  padding-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+.carousel-caption .number3 span{
+  font-size: 90px;
+  padding-bottom: 20px;
+}
+.carousel-caption h3{
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+.jumbotron{
+  padding-bottom: 0.8rem;
+}
+.jumbotron .jumbo_head{
+  padding-bottom: 0rem;
+}
+.jumbotron .jumbo_head .display-5{
+  font-weight: 700;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+}
+.jumbotron p{
+  font-size: 18px;
+  font-family: 'Poppins',sans-serif;
+}
+.jumbotron a{
+  margin-left:0px ;
+}
+.jumbotron .fa-download{
+  padding-right:2px ;
+  color: #0a49cf;
+}
+.card-img-top{
+  height: 230px;
+  width: 100%;
+}
+.padding{
+  padding-bottom:1rem ;
+}
+.welcome h1{
+  font-weight: 700;
+  font-size: 55px;
+  font-family: "Poppins", sans-serif;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 3rem;
+}
+.welcome hr{
+  border-top: 2px solid #ffc451 ;
+  margin-left: 7%;
+  width: 50%;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+.clients_head h1{
+  padding-right: 66%;
+  padding-top: 1rem;
+}
+.clients_head .welcome hr{
+  width: 50%;
+  margin-right: 0%;
+  margin-bottom: 0.5rem;
+}
+#states .icon-box{
+  padding: 30px 20px;
+  border: 2.5px solid #ffc451 ;
+  height: 100%;
+  text-align: center;
+  background-color: #3f3f3f;
+  color: #ffc451;
+}
+#states .icon-box h3{
+  font-weight: 450;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+}
+hr{
+  border: 0.1px solid #0000005b;
+}
+#states .icon-box:hover{
+  padding: 30px 20px #3f3f3f;
+  border: 2.5px solid #ffc451 ;
+  height: 100%;
+  text-align: center;
+  background-color: #ffc451;
+  color: #3f3f3f;
+  font-weight: 450;
+}
+.comingSoon{
+  width: 100%;
+  height: 58px;
+  margin-top: 1.5rem;
+  font-size: 25px;
+  background-color: #3f3f3f;
+  color: #ffc451;
+  border: 2px solid #ffc451;
+}
+.comingSoon:hover{
+  width: 100%;
+  height: 62px;
+  margin-top: 1.5rem;
+  font-size: 28px;
+  background-color: #ffc451;
+  color: #3f3f3f;
+  font-weight: 800;
+  border: 2px solid #ffc451;
+}
+#comingSoon{
+  background-color: #3f3f3f;
+}
+#comingSoon .display-6{
+  font-weight: 450;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  color: #ffc451;
+}
+#comingSoon hr{
+  width: 60%;
+  border: 1px solid #ffc451;
+  margin-top: 2rem;
+}
+#comingSoon .card{
+  margin-top: 0rem;
+}
+
+.social{
+  font-size: 5rem;
+}
+.fa-facebook{
+  margin-right: 3rem;
+  color: #3b5998;
+  margin-left: 5rem;
+}
+.fa-twitter{
+  margin-right: 3rem;
+  color: #00acee;
+  margin-left: 5rem;
+} 
+.fa-whatsapp{
+  margin-right: 3rem;
+  color: #4FCE5D;
+  margin-left: 5rem;
+}
+.fa-google{
+  margin-right: 3rem;
+  color: #db3236;
+  margin-left: 5rem;
+}
+.fa-phone{
+  margin-right: 3rem;
+  margin-left: 5rem;
+}
+.fa-facebook:hover {
+  color: d5d5d5;
+}
+footer{
+  background-color: #3f3f3f;
+  color:#d5d5d5;
+  padding-top: 2rem;
+}
+footer.whatsapp_no{
+  color:#d5d5d5;
+}
+footer hr{
+  border-top: 2px solid #b4b4b4 ;
+  width: 95%;
+  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+hr.light{
+  border-top: 2px solid #b4b4b4 ;
+  width: 95%;
+  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+hr.light-100{
+  border-top: 2px solid #b4b4b4 ;
+  width: 95%;
+  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+.fixed {
+  /* The image used */
+  background-image: url("./Photos/cycle.jpg");
+  /* Set a specific height */
+  min-height: 300px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('background.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+

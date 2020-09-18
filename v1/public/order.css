@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+    color: #222;
+    background-color: rgba(221, 252, 247, 0.89);
+  }
+.card{
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    background-color: white;
+}
+.top{
+    height: 5.5rem;
+    font-weight: 450;
+    font-size: 54px;
+    color: rgba(63, 62, 62, 0.815);
+    background-color: rgba(128, 128, 128, 0.548);
+}
+.inner_card_header{
+    font-weight: 850;
+    font-size: 22px;
+    color: rgba(35, 34, 36, 0.767);
+    background-color: rgba(128, 128, 128, 0.301);
+}
+.inner_card_text{
+    font-size: 17px;
+    color: rgba(14, 12, 15, 0.767);   
+}
+.inner_card_footer{
+    font-weight: 850;
+    font-size: 19px;
+    color: rgba(35, 34, 36, 0.767);
+    background-color: rgba(128, 128, 128, 0.171);
+}
+.product_cost{
+    margin-top: 0px;
+    margin-bottom: .5rem;
+    background-color: rgba(128, 128, 128, 0.61);
+    font: small;
+    font-weight: 800;
+    color: rgba(36, 32, 56, 0.349);
+}
+.big_card_footer{
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(105, 3, 3, 0.822);
+    background-color: rgba(128, 128, 128, 0.548);
+    height: 3.5rem;
+}
+
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+

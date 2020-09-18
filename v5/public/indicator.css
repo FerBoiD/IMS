@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+    color: #222;
+  }
+.top_jumbo{
+    height: 21rem;
+    background-color: #222
+}
+.top_jumbo .display-4{
+    padding-top: 3rem;
+    font-weight: 650;
+    font-size: 6rem;
+    font-family: 'Poppins',sans-serif;
+    color: #ffc451;
+}
+.top_jumbo hr{
+    border: 1.5px solid #ffc451;
+    width: 80%;
+}
+.top_jumbo p{
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+    color: #ffc451;
+    padding-top: 1rem;
+}
+
+.cable_info{
+    margin-top: 1rem;
+    width: 18rem;
+    background-color: rgb(254, 254, 255);
+}
+.rating{
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+.rating .fa-star{
+    color: rgb(255, 238, 0);
+}
+.active{
+    color: rgb(177, 179, 162);
+}
+.card .btn{
+    border: 2px solid #ffc451;
+    background-color:rgba(0, 0, 0, 0.836);
+    color: #ffc451;
+}
+.card .btn1:hover{
+    background-color: #ffc451;
+    color: black;
+    font-weight: 500;
+    height: 40px;
+    width: 130px;
+}
+.card .btn2:hover{
+    background-color: #ffc451;
+    color: black;
+    font-weight: 500;
+    height: 40px;
+    width: 100px;
+}
+.price{
+    font-size: large;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+

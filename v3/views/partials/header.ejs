@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+   
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md fixed-top">
+<div class="container-fluid">
+    <a class="navbar-brand" href="/">IMS.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ColapseNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ColapseNavbar">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cable">Cables</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="indicator">Indicators</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/wishlist">Wishlist <i class="fa fa-heart" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="order"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
+            <%if(!currentUser){%>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Sign Up</a>
+            </li>
+            <%}else{%>
+            <li class="nav-item">
+                <a class="nav-link" href="/login" style="color:#ffc451;font-size: 21px;">Hi <%=currentUser.username%>!!</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+</nav>
